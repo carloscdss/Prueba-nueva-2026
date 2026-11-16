@@ -1,0 +1,330 @@
+import type { LazoControl } from './plc';
+
+export interface EquipoImportadoM7451 {
+  uuid: string;
+  tag: string;
+  descriptorId: string;
+  posicion: [number, number, number];
+  rotacionY: number;
+  metadata?: {
+    seccion_excel: string;
+    modelo: string;
+    cantidad: number;
+  };
+}
+
+export interface ConexionImportadaM7451 {
+  id: string;
+  equipoA: string;
+  puertoA: string;
+  equipoB: string;
+  puertoB: string;
+  activo: boolean;
+}
+
+export interface PayloadPlantaM7451 {
+  nombre: string;
+  origen: string;
+  equipos: EquipoImportadoM7451[];
+  conexiones: ConexionImportadaM7451[];
+  lazos_plc: LazoControl[];
+}
+
+export const PLANTA_AGUA_M7451: PayloadPlantaM7451 = {
+  nombre: 'Planta de Agua Desmineralizada M-7451 - Refinería El Palito',
+  origen: 'CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx',
+  equipos: [
+    // SECCIÓN 5, 6, 7 - SALA DE CONTROL (Z = -10 a -5)
+    {
+      uuid: 'gab-01',
+      tag: 'GAB-01',
+      descriptorId: 'gabinete-base',
+      posicion: [-4.4, 1.0, -8.2],
+      rotacionY: 0,
+      metadata: { seccion_excel: '5.1', modelo: 'NEMA 12/IP65 800x2000x800mm', cantidad: 1 },
+    },
+    {
+      uuid: 'gab-01-rep',
+      tag: 'GAB-01-REP',
+      descriptorId: 'gabinete-base',
+      posicion: [-1.8, 1.0, -8.2],
+      rotacionY: 0,
+      metadata: { seccion_excel: '5.1', modelo: 'NEMA 12/IP65 Repuesto', cantidad: 1 },
+    },
+    {
+      uuid: 'plc-1756-l83ek',
+      tag: 'PLC-1756',
+      descriptorId: 'plc-controllogix',
+      posicion: [-4.4, 1.05, -7.72],
+      rotacionY: 0,
+      metadata: { seccion_excel: '5.11', modelo: '1756-L83EK + 1756-A13K + IB32K/OB32K/IF16K/OF8K/EN2TK', cantidad: 1 },
+    },
+    {
+      uuid: 'plc-1756-rep',
+      tag: 'PLC-1756-REP',
+      descriptorId: 'plc-controllogix',
+      posicion: [-1.8, 1.05, -7.72],
+      rotacionY: 0,
+      metadata: { seccion_excel: '5.11', modelo: '1756-L83EK Repuesto + MVI56E-MNETK', cantidad: 1 },
+    },
+    {
+      uuid: 'hmi-pv7-12',
+      tag: 'HMI-PV7-12',
+      descriptorId: 'hmi-panel',
+      posicion: [-4.4, 1.56, -7.72],
+      rotacionY: 0,
+      metadata: { seccion_excel: '5.22', modelo: 'PanelView Plus 7 12"', cantidad: 1 },
+    },
+    {
+      uuid: 'hmi-pv7-rep',
+      tag: 'HMI-PV7-REP',
+      descriptorId: 'hmi-panel',
+      posicion: [-1.8, 1.56, -7.72],
+      rotacionY: 0,
+      metadata: { seccion_excel: '5.22', modelo: 'PanelView Plus 7 12" Repuesto', cantidad: 1 },
+    },
+    {
+      uuid: 'ups-73',
+      tag: 'UPS-73',
+      descriptorId: 'ups-industrial',
+      posicion: [-6.8, 0.8, -8.2],
+      rotacionY: 0,
+      metadata: { seccion_excel: '7.3', modelo: 'UPS On-Line Doble Conversión 3 KVA', cantidad: 1 },
+    },
+    {
+      uuid: 'gab-02',
+      tag: 'GAB-02',
+      descriptorId: 'gabinete-base',
+      posicion: [0.8, 1.0, -8.2],
+      rotacionY: 0,
+      metadata: { seccion_excel: '6.1', modelo: 'Marshalling NEMA 12 (28 aisladores, 40 relés 24VDC, 12 bypass)', cantidad: 1 },
+    },
+
+    // SECCIÓN 10 - FILTROS D-951 A D-961 (X = -15 a -10, Z = 0 a 5)
+    { uuid: 'd-951', tag: 'D-951', descriptorId: 'filtro-estrainer', posicion: [-15.0, 0.48, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Multimedia D-951', cantidad: 1 } },
+    { uuid: 'd-952', tag: 'D-952', descriptorId: 'filtro-estrainer', posicion: [-14.0, 0.48, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Multimedia D-952', cantidad: 1 } },
+    { uuid: 'd-953', tag: 'D-953', descriptorId: 'filtro-estrainer', posicion: [-13.0, 0.48, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Multimedia D-953', cantidad: 1 } },
+    { uuid: 'd-954', tag: 'D-954', descriptorId: 'filtro-estrainer', posicion: [-12.0, 0.48, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Multimedia D-954', cantidad: 1 } },
+    { uuid: 'd-955', tag: 'D-955', descriptorId: 'filtro-estrainer', posicion: [-11.0, 0.48, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Multimedia D-955', cantidad: 1 } },
+    { uuid: 'd-956', tag: 'D-956', descriptorId: 'filtro-estrainer', posicion: [-10.0, 0.48, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Multimedia D-956', cantidad: 1 } },
+    { uuid: 'd-957', tag: 'D-957', descriptorId: 'filtro-estrainer', posicion: [-15.0, 0.48, 4.0], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Carbón D-957', cantidad: 1 } },
+    { uuid: 'd-958', tag: 'D-958', descriptorId: 'filtro-estrainer', posicion: [-13.75, 0.48, 4.0], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Carbón D-958', cantidad: 1 } },
+    { uuid: 'd-959', tag: 'D-959', descriptorId: 'filtro-estrainer', posicion: [-12.5, 0.48, 4.0], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Carbón D-959', cantidad: 1 } },
+    { uuid: 'd-960', tag: 'D-960', descriptorId: 'filtro-estrainer', posicion: [-11.25, 0.48, 4.0], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Carbón D-960', cantidad: 1 } },
+    { uuid: 'd-961', tag: 'D-961', descriptorId: 'filtro-estrainer', posicion: [-10.0, 0.48, 4.0], rotacionY: 0, metadata: { seccion_excel: '10.1', modelo: 'Filtro Carbón D-961', cantidad: 1 } },
+    { uuid: '71fi-911', tag: '71FI-911', descriptorId: 'sensor-flujo', posicion: [-12.5, 1.0, 2.3], rotacionY: 0, metadata: { seccion_excel: '10.2', modelo: 'Transmisor Flujo Filtros', cantidad: 1 } },
+    { uuid: '71fe-911', tag: '71FE-911', descriptorId: 'orificio-medidor', posicion: [-13.6, 0.35, 2.3], rotacionY: 0, metadata: { seccion_excel: '10.3', modelo: 'Placa Orificio 71FE-911', cantidad: 1 } },
+    { uuid: 'pi-951', tag: 'PI-951', descriptorId: 'manometro', posicion: [-15.0, 0.9, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.4', modelo: 'Manómetros Filtros D-951..D-961 (25 pts)', cantidad: 25 } },
+
+    // SECCIÓN 10 - TANQUES AGUA POTABLE F-954 Y F-959 (X = -9.5 a -6, Z = 0 a 5)
+    { uuid: 'f-954', tag: 'F-954', descriptorId: 'tanque-vertical', posicion: [-8.3, 1.2, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Tanque Agua Potable F-954', cantidad: 1 } },
+    { uuid: 'f-959', tag: 'F-959', descriptorId: 'tanque-vertical', posicion: [-8.3, 1.2, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Tanque Agua Potable F-959', cantidad: 1 } },
+    { uuid: 'lt-954', tag: 'LT-954', descriptorId: 'sensor-nivel', posicion: [-7.2, 1.4, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Transmisor Nivel F-954', cantidad: 1 } },
+    { uuid: 'lt-959', tag: 'LT-959', descriptorId: 'sensor-nivel', posicion: [-7.2, 1.4, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Transmisor Nivel F-959', cantidad: 1 } },
+    { uuid: 'pt-954', tag: 'PT-954', descriptorId: 'sensor-presion', posicion: [-7.2, 2.1, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Transmisor Presión F-954', cantidad: 1 } },
+    { uuid: 'ft-959', tag: 'FT-959', descriptorId: 'sensor-flujo', posicion: [-7.2, 0.7, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Transmisor Flujo F-959', cantidad: 1 } },
+    { uuid: 'psh-954', tag: 'PSH-954', descriptorId: 'switch-presion', posicion: [-9.2, 1.8, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Switch Presión F-954', cantidad: 1 } },
+    { uuid: 'lg-954', tag: 'LG-954', descriptorId: 'indicador-nivel-vidrio', posicion: [-7.4, 1.2, 0.4], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Cristal de Nivel (3 pts)', cantidad: 3 } },
+    { uuid: 'fcv-954a', tag: 'FCV-954A', descriptorId: 'valvula-control', posicion: [-6.3, 0.48, 0.8], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Válvula Control F-954A', cantidad: 1 } },
+    { uuid: 'fcv-954b', tag: 'FCV-954B', descriptorId: 'valvula-control', posicion: [-6.3, 0.48, 2.0], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Válvula Control F-954B', cantidad: 1 } },
+    { uuid: 'fcv-959', tag: 'FCV-959', descriptorId: 'valvula-control', posicion: [-6.3, 0.48, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Válvula Control F-959', cantidad: 1 } },
+    { uuid: 'fe-954', tag: 'FE-954', descriptorId: 'orificio-medidor', posicion: [-6.6, 0.3, 1.4], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Elemento Flujo (2 pts)', cantidad: 2 } },
+    { uuid: 'iy-954', tag: 'IY-954', descriptorId: 'convertidor-ip', posicion: [-6.3, 1.05, 0.8], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Convertidor I/P (2 pts)', cantidad: 2 } },
+    { uuid: 'pi-954', tag: 'PI-954', descriptorId: 'manometro', posicion: [-9.2, 1.1, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.5', modelo: 'Manómetros Tanques F-954/F-959 (6 pts)', cantidad: 6 } },
+
+    // SECCIÓN 10 - BOMBAS (X = -5 a 0, Z = 0 a 5)
+    { uuid: 'g-7152-a', tag: 'G-7152-A', descriptorId: 'bomba-centrifuga', posicion: [-4.5, 0.65, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.6', modelo: 'Bomba Proceso G-7152-A', cantidad: 1 } },
+    { uuid: 'g-7152-b', tag: 'G-7152-B', descriptorId: 'bomba-centrifuga', posicion: [-4.5, 0.65, 2.4], rotacionY: 0, metadata: { seccion_excel: '10.6', modelo: 'Bomba Proceso G-7152-B', cantidad: 1 } },
+    { uuid: 'g-7152-c', tag: 'G-7152-C', descriptorId: 'bomba-centrifuga', posicion: [-4.5, 0.65, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.7', modelo: 'Bomba Jockey G-7152-C', cantidad: 1 } },
+    { uuid: 'g-953b', tag: 'G-953B', descriptorId: 'bomba-centrifuga', posicion: [-2.5, 0.65, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.8', modelo: 'Bomba G-953B', cantidad: 1 } },
+    { uuid: 'g-954', tag: 'G-954', descriptorId: 'bomba-centrifuga', posicion: [-2.5, 0.65, 2.4], rotacionY: 0, metadata: { seccion_excel: '10.8', modelo: 'Bomba G-954', cantidad: 1 } },
+    { uuid: 'g-7154-a', tag: 'G-7154-A', descriptorId: 'bomba-centrifuga', posicion: [-0.5, 0.65, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.9', modelo: 'Bomba G-7154-A', cantidad: 1 } },
+    { uuid: 'g-7154-b', tag: 'G-7154-B', descriptorId: 'bomba-centrifuga', posicion: [-0.5, 0.65, 2.4], rotacionY: 0, metadata: { seccion_excel: '10.9', modelo: 'Bomba G-7154-B', cantidad: 1 } },
+    { uuid: 'g-7154-c', tag: 'G-7154-C', descriptorId: 'bomba-centrifuga', posicion: [-0.5, 0.65, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.9', modelo: 'Bomba G-7154-C', cantidad: 1 } },
+    { uuid: 'pt-7152', tag: 'PT-7152', descriptorId: 'sensor-presion', posicion: [-4.5, 1.4, 1.5], rotacionY: 0, metadata: { seccion_excel: '10.6', modelo: 'Transmisor Presión Descarga G-7152', cantidad: 1 } },
+    { uuid: 'psh-7152a', tag: 'PSH-7152A', descriptorId: 'switch-presion', posicion: [-3.6, 1.1, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.6', modelo: 'PSH G-7152-A/B/C (6 pts)', cantidad: 6 } },
+    { uuid: 'psh-953b', tag: 'PSH-953B', descriptorId: 'switch-presion', posicion: [-1.7, 1.1, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.8', modelo: 'PSH G-953B/G-954 (4 pts)', cantidad: 4 } },
+    { uuid: 'sov-954', tag: 'SOV-954', descriptorId: 'valvula-solenoid', posicion: [-2.5, 1.1, 3.3], rotacionY: 0, metadata: { seccion_excel: '10.8', modelo: 'Válvula Solenoide Bombas G-954', cantidad: 1 } },
+    { uuid: 'psh-7154a', tag: 'PSH-7154A', descriptorId: 'switch-presion', posicion: [0.3, 1.1, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.9', modelo: 'PSH G-7154-A/B/C (3 pts)', cantidad: 3 } },
+    { uuid: 'fe-7154', tag: 'FE-7154', descriptorId: 'orificio-medidor', posicion: [-0.5, 0.3, 5.0], rotacionY: 0, metadata: { seccion_excel: '10.9', modelo: 'Elemento Flujo G-7154', cantidad: 1 } },
+    { uuid: 'pi-7152', tag: 'PI-7152', descriptorId: 'manometro', posicion: [-4.5, 1.35, 0.6], rotacionY: 0, metadata: { seccion_excel: '10.6', modelo: 'Manómetros Bombas (15 pts)', cantidad: 15 } },
+
+    // SECCIÓN 10 - INTERCAMBIADORES M-7451-F1 A F6 EN FILA (X = 1.5 a 10, Z = 0 a 5)
+    { uuid: 'm-7451-f1', tag: 'M-7451-F1', descriptorId: 'intercambiador-tubular', posicion: [1.6, 0.45, 2.0], rotacionY: 1.5708, metadata: { seccion_excel: '10.10', modelo: 'Intercambiador Iónico F1 (21 pts)', cantidad: 1 } },
+    { uuid: 'm-7451-f2', tag: 'M-7451-F2', descriptorId: 'intercambiador-tubular', posicion: [3.2, 0.45, 2.0], rotacionY: 1.5708, metadata: { seccion_excel: '10.10', modelo: 'Intercambiador Iónico F2 (21 pts)', cantidad: 1 } },
+    { uuid: 'm-7451-f3', tag: 'M-7451-F3', descriptorId: 'intercambiador-tubular', posicion: [4.8, 0.45, 2.0], rotacionY: 1.5708, metadata: { seccion_excel: '10.11', modelo: 'Intercambiador Iónico F3 (24 pts)', cantidad: 1 } },
+    { uuid: 'm-7451-f4', tag: 'M-7451-F4', descriptorId: 'intercambiador-tubular', posicion: [6.4, 0.45, 2.0], rotacionY: 1.5708, metadata: { seccion_excel: '10.12', modelo: 'Intercambiador Mixto F4 (23 pts)', cantidad: 1 } },
+    { uuid: 'm-7451-f5', tag: 'M-7451-F5', descriptorId: 'intercambiador-tubular', posicion: [8.0, 0.45, 2.0], rotacionY: 1.5708, metadata: { seccion_excel: '10.12', modelo: 'Intercambiador Mixto F5 (25 pts)', cantidad: 1 } },
+    { uuid: 'm-7451-f6', tag: 'M-7451-F6', descriptorId: 'intercambiador-tubular', posicion: [9.6, 0.45, 2.0], rotacionY: 1.5708, metadata: { seccion_excel: '10.12', modelo: 'Intercambiador Mixto F6 (22 pts)', cantidad: 1 } },
+
+    { uuid: 'ft-f1', tag: 'FT-F1', descriptorId: 'sensor-flujo', posicion: [1.6, 0.85, 0.3], rotacionY: 0, metadata: { seccion_excel: '10.10', modelo: 'Transmisor Flujo F1', cantidad: 1 } },
+    { uuid: 'ft-f2', tag: 'FT-F2', descriptorId: 'sensor-flujo', posicion: [3.2, 0.85, 0.3], rotacionY: 0, metadata: { seccion_excel: '10.10', modelo: 'Transmisor Flujo F2', cantidad: 1 } },
+    { uuid: 'ft-f3', tag: 'FT-F3', descriptorId: 'sensor-flujo', posicion: [4.8, 0.85, 0.3], rotacionY: 0, metadata: { seccion_excel: '10.11', modelo: 'Transmisor Flujo F3', cantidad: 1 } },
+
+    { uuid: 'at-ph-f1', tag: 'AT-PH-F1', descriptorId: 'analizador-generico', posicion: [1.6, 0.85, 1.05], rotacionY: 0, metadata: { seccion_excel: '10.10', modelo: 'Analizador pH F1', cantidad: 1 } },
+    { uuid: 'at-ph-f2', tag: 'AT-PH-F2', descriptorId: 'analizador-generico', posicion: [3.2, 0.85, 1.05], rotacionY: 0, metadata: { seccion_excel: '10.10', modelo: 'Analizador pH F2', cantidad: 1 } },
+    { uuid: 'at-ph-f3', tag: 'AT-PH-F3', descriptorId: 'analizador-generico', posicion: [4.8, 0.85, 1.05], rotacionY: 0, metadata: { seccion_excel: '10.11', modelo: 'Analizador pH F3', cantidad: 1 } },
+    { uuid: 'at-ph-f4', tag: 'AT-PH-F4', descriptorId: 'analizador-generico', posicion: [6.4, 0.85, 1.05], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador pH F4', cantidad: 1 } },
+    { uuid: 'at-ph-f5', tag: 'AT-PH-F5', descriptorId: 'analizador-generico', posicion: [8.0, 0.85, 1.05], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador pH F5', cantidad: 1 } },
+    { uuid: 'at-ph-f6', tag: 'AT-PH-F6', descriptorId: 'analizador-generico', posicion: [9.6, 0.85, 1.05], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador pH F6', cantidad: 1 } },
+
+    { uuid: 'at-si-f4', tag: 'AT-SI-F4', descriptorId: 'analizador-generico', posicion: [6.4, 0.85, 0.3], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador Sílice F4', cantidad: 1 } },
+    { uuid: 'at-si-f5', tag: 'AT-SI-F5', descriptorId: 'analizador-generico', posicion: [8.0, 0.85, 0.3], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador Sílice F5', cantidad: 1 } },
+    { uuid: 'at-si-f6', tag: 'AT-SI-F6', descriptorId: 'analizador-generico', posicion: [9.6, 0.85, 0.3], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador Sílice F6', cantidad: 1 } },
+
+    { uuid: 'at-ce-f4', tag: 'AT-CE-F4', descriptorId: 'analizador-generico', posicion: [6.4, 0.85, 3.05], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador Conductividad CE F4', cantidad: 1 } },
+    { uuid: 'at-ce-f5', tag: 'AT-CE-F5', descriptorId: 'analizador-generico', posicion: [8.0, 0.85, 3.05], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador Conductividad CE F5', cantidad: 1 } },
+    { uuid: 'at-ce-f6', tag: 'AT-CE-F6', descriptorId: 'analizador-generico', posicion: [9.6, 0.85, 3.05], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Analizador Conductividad CE F6', cantidad: 1 } },
+
+    { uuid: 'fcv-f1', tag: 'FCV-F1', descriptorId: 'valvula-control', posicion: [1.6, 0.48, 3.8], rotacionY: 1.5708, metadata: { seccion_excel: '10.10', modelo: 'Válvula Control F1 (5 por tren)', cantidad: 5 } },
+    { uuid: 'fcv-f2', tag: 'FCV-F2', descriptorId: 'valvula-control', posicion: [3.2, 0.48, 3.8], rotacionY: 1.5708, metadata: { seccion_excel: '10.10', modelo: 'Válvula Control F2 (5 por tren)', cantidad: 5 } },
+    { uuid: 'fcv-f3', tag: 'FCV-F3', descriptorId: 'valvula-control', posicion: [4.8, 0.48, 3.8], rotacionY: 1.5708, metadata: { seccion_excel: '10.11', modelo: 'Válvula Control F3 (5 por tren)', cantidad: 5 } },
+    { uuid: 'fcv-f4', tag: 'FCV-F4', descriptorId: 'valvula-control', posicion: [6.4, 0.48, 3.8], rotacionY: 1.5708, metadata: { seccion_excel: '10.12', modelo: 'Válvula Control F4 (6 por tren)', cantidad: 6 } },
+    { uuid: 'fcv-f5', tag: 'FCV-F5', descriptorId: 'valvula-control', posicion: [8.0, 0.48, 3.8], rotacionY: 1.5708, metadata: { seccion_excel: '10.12', modelo: 'Válvula Control F5 (6 por tren)', cantidad: 6 } },
+    { uuid: 'fcv-f6', tag: 'FCV-F6', descriptorId: 'valvula-control', posicion: [9.6, 0.48, 3.8], rotacionY: 1.5708, metadata: { seccion_excel: '10.12', modelo: 'Válvula Control F6 (6 por tren)', cantidad: 6 } },
+
+    { uuid: 'sov-f1', tag: 'SOV-F1', descriptorId: 'valvula-solenoid', posicion: [1.6, 0.85, 4.7], rotacionY: 0, metadata: { seccion_excel: '10.10', modelo: 'Solenoides F1 (5 pts)', cantidad: 5 } },
+    { uuid: 'sov-f2', tag: 'SOV-F2', descriptorId: 'valvula-solenoid', posicion: [3.2, 0.85, 4.7], rotacionY: 0, metadata: { seccion_excel: '10.10', modelo: 'Solenoides F2 (5 pts)', cantidad: 5 } },
+    { uuid: 'sov-f3', tag: 'SOV-F3', descriptorId: 'valvula-solenoid', posicion: [4.8, 0.85, 4.7], rotacionY: 0, metadata: { seccion_excel: '10.11', modelo: 'Solenoides F3 (5 pts)', cantidad: 5 } },
+    { uuid: 'sov-f4', tag: 'SOV-F4', descriptorId: 'valvula-solenoid', posicion: [6.4, 0.85, 4.7], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Solenoides F4 (6 pts)', cantidad: 6 } },
+    { uuid: 'sov-f5', tag: 'SOV-F5', descriptorId: 'valvula-solenoid', posicion: [8.0, 0.85, 4.7], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Solenoides F5 (6 pts)', cantidad: 6 } },
+    { uuid: 'sov-f6', tag: 'SOV-F6', descriptorId: 'valvula-solenoid', posicion: [9.6, 0.85, 4.7], rotacionY: 0, metadata: { seccion_excel: '10.12', modelo: 'Solenoides F6 (7 pts)', cantidad: 7 } },
+
+    // SECCIÓN 10 - TANQUES DESMINERALIZADA T-33X1 Y T-33X2 + 74FT572 (X = 10 a 15, Z = 0 a 5)
+    { uuid: 't-33x1', tag: 'T-33X1', descriptorId: 'tanque-vertical', posicion: [12.4, 1.2, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Tanque Agua Desmineralizada T-33X1', cantidad: 1 } },
+    { uuid: 't-33x2', tag: 'T-33X2', descriptorId: 'tanque-vertical', posicion: [12.4, 1.2, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Tanque Agua Desmineralizada T-33X2', cantidad: 1 } },
+    { uuid: 'lt-33x1', tag: 'LT-33X1', descriptorId: 'sensor-nivel', posicion: [13.5, 1.4, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Transmisor Nivel T-33X1', cantidad: 1 } },
+    { uuid: 'lt-33x2', tag: 'LT-33X2', descriptorId: 'sensor-nivel', posicion: [13.5, 1.4, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Transmisor Nivel T-33X2', cantidad: 1 } },
+    { uuid: 'lsh-33x1', tag: 'LSH-33X1', descriptorId: 'switch-nivel', posicion: [13.5, 2.2, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Switch Nivel Alto T-33X1', cantidad: 1 } },
+    { uuid: 'pic-33x1', tag: 'PIC-33X1', descriptorId: 'sensor-presion', posicion: [13.5, 2.4, 2.7], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Controlador/Transmisor Presión PIC-33X1', cantidad: 1 } },
+    { uuid: 'tt-33x1', tag: 'TT-33X1', descriptorId: 'sensor-temperatura', posicion: [11.3, 1.2, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Transmisor Temperatura T-33X1', cantidad: 1 } },
+    { uuid: 'tt-33x2', tag: 'TT-33X2', descriptorId: 'sensor-temperatura', posicion: [11.3, 1.2, 4.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Transmisor Temperatura T-33X2', cantidad: 1 } },
+    { uuid: 'iy-33x1', tag: 'IY-33X1', descriptorId: 'convertidor-ip', posicion: [14.2, 1.0, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Convertidor I/P T-33X1', cantidad: 1 } },
+    { uuid: 'fcv-33x1', tag: 'FCV-33X1', descriptorId: 'valvula-control', posicion: [14.5, 0.48, 1.8], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Válvula Control T-33X1', cantidad: 1 } },
+    { uuid: 'fcv-33x2', tag: 'FCV-33X2', descriptorId: 'valvula-control', posicion: [14.5, 0.48, 3.6], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Válvula Control T-33X2', cantidad: 1 } },
+    { uuid: 'pi-33x1', tag: 'PI-33X1', descriptorId: 'manometro', posicion: [12.4, 2.55, 1.2], rotacionY: 0, metadata: { seccion_excel: '10.13', modelo: 'Manómetros T-33X1/T-33X2 (4 pts)', cantidad: 4 } },
+    { uuid: '74ft572a', tag: '74FT572A', descriptorId: 'sensor-flujo', posicion: [10.6, 0.7, 5.2], rotacionY: 0, metadata: { seccion_excel: '10.14', modelo: 'Rosemount 8712 Caudal Magnético Ácido', cantidad: 1 } },
+    { uuid: '74ft572b', tag: '74FT572B', descriptorId: 'sensor-flujo', posicion: [11.5, 0.7, 5.2], rotacionY: 0, metadata: { seccion_excel: '10.14', modelo: 'Rosemount 8712 Caudal Magnético Ácido', cantidad: 1 } },
+
+    // SECCIÓN 8 - PANEL DE CAMPO LOCAL (X = 5, Z = 8)
+    {
+      uuid: 'panel-campo-01',
+      tag: 'PANEL-CAMPO-01',
+      descriptorId: 'gabinete-base',
+      posicion: [5, 0.9, 8],
+      rotacionY: 0,
+      metadata: { seccion_excel: '8.1', modelo: 'NEMA 4X/IP66 Inox 316L c/ Pedestal y Tejadillo', cantidad: 1 },
+    },
+    {
+      uuid: 'hs-campo-01',
+      tag: 'HS-CAMPO-01',
+      descriptorId: 'selector-manual',
+      posicion: [4.2, 1.1, 8.45],
+      rotacionY: 0,
+      metadata: { seccion_excel: '8.3', modelo: '6 Selectores MAN-OFF-AUTO + 12 Pulsadores + 18 LEDs', cantidad: 18 },
+    },
+    {
+      uuid: 'hs-emg-01',
+      tag: 'HS-EMG-01',
+      descriptorId: 'selector-manual',
+      posicion: [5.8, 1.1, 8.45],
+      rotacionY: 0,
+      metadata: { seccion_excel: '8.5', modelo: '2 Pulsadores Parada de Emergencia Tipo Hongo', cantidad: 2 },
+    },
+  ],
+  conexiones: [
+    // Flujo de proceso: Filtros -> Tanques Agua Potable -> Bombas -> Intercambiadores -> Tanques Desmineralizada
+    { id: 'p1', equipoA: 'd-951', puertoA: 'salida', equipoB: '71fe-911', puertoB: 'entrada', activo: true },
+    { id: 'p2', equipoA: '71fe-911', puertoA: 'salida', equipoB: 'f-954', puertoB: 'entrada', activo: true },
+    { id: 'p3', equipoA: 'd-957', puertoA: 'salida', equipoB: 'f-959', puertoB: 'entrada', activo: true },
+    { id: 'p4', equipoA: 'f-954', puertoA: 'salida', equipoB: 'fcv-954a', puertoB: 'entrada', activo: true },
+    { id: 'p5', equipoA: 'fcv-954a', puertoA: 'salida', equipoB: 'g-7152-a', puertoB: 'succion', activo: true },
+    { id: 'p6', equipoA: 'f-959', puertoA: 'salida', equipoB: 'fcv-959', puertoB: 'entrada', activo: true },
+    { id: 'p7', equipoA: 'fcv-959', puertoA: 'salida', equipoB: 'g-7152-b', puertoB: 'succion', activo: true },
+    { id: 'p8', equipoA: 'g-7152-a', puertoA: 'descarga', equipoB: 'g-953b', puertoB: 'succion', activo: true },
+    { id: 'p9', equipoA: 'g-953b', puertoA: 'descarga', equipoB: 'g-7154-a', puertoB: 'succion', activo: true },
+    { id: 'p10', equipoA: 'g-7154-a', puertoA: 'descarga', equipoB: 'm-7451-f1', puertoB: 'proceso-entrada', activo: true },
+    { id: 'p11', equipoA: 'm-7451-f1', puertoA: 'proceso-salida', equipoB: 'm-7451-f2', puertoB: 'proceso-entrada', activo: true },
+    { id: 'p12', equipoA: 'm-7451-f2', puertoA: 'proceso-salida', equipoB: 'm-7451-f3', puertoB: 'proceso-entrada', activo: true },
+    { id: 'p13', equipoA: 'm-7451-f3', puertoA: 'proceso-salida', equipoB: 'm-7451-f4', puertoB: 'proceso-entrada', activo: true },
+    { id: 'p14', equipoA: 'm-7451-f4', puertoA: 'proceso-salida', equipoB: 'm-7451-f5', puertoB: 'proceso-entrada', activo: true },
+    { id: 'p15', equipoA: 'm-7451-f5', puertoA: 'proceso-salida', equipoB: 'm-7451-f6', puertoB: 'proceso-entrada', activo: true },
+    { id: 'p16', equipoA: 'm-7451-f6', puertoA: 'proceso-salida', equipoB: '74ft572a', puertoB: 'proceso', activo: true },
+    { id: 'p17', equipoA: '74ft572a', puertoA: 'proceso', equipoB: 't-33x1', puertoB: 'entrada', activo: true },
+    { id: 'p18', equipoA: 't-33x1', puertoA: 'salida', equipoB: 'fcv-33x1', puertoB: 'entrada', activo: true },
+    { id: 'p19', equipoA: 't-33x2', puertoA: 'salida', equipoB: 'fcv-33x2', puertoB: 'entrada', activo: true },
+
+    // Lazos y comunicaciones de control (Campo -> Panel Local -> Marshalling GAB-02 -> PLC/HMI GAB-01)
+    { id: 's1', equipoA: 'lt-954', puertoA: 'senal', equipoB: 'gab-02', puertoB: 'senal', activo: true },
+    { id: 's2', equipoA: 'lt-33x1', puertoA: 'senal', equipoB: 'gab-02', puertoB: 'senal', activo: true },
+    { id: 's3', equipoA: 'ft-f1', puertoA: 'senal', equipoB: 'gab-02', puertoB: 'senal', activo: true },
+    { id: 's4', equipoA: 'pic-33x1', puertoA: 'senal', equipoB: 'gab-02', puertoB: 'senal', activo: true },
+    { id: 's5', equipoA: 'panel-campo-01', puertoA: 'senal', equipoB: 'gab-02', puertoB: 'senal', activo: true },
+    { id: 's6', equipoA: 'gab-02', puertoA: 'senal', equipoB: 'plc-1756-l83ek', puertoB: 'senal', activo: true },
+    { id: 's7', equipoA: 'plc-1756-l83ek', puertoA: 'ethernet', equipoB: 'hmi-pv7-12', puertoB: 'ethernet', activo: true },
+    { id: 's8', equipoA: 'iy-954', puertoA: 'aire', equipoB: 'fcv-954a', puertoB: 'senal', activo: true },
+    { id: 's9', equipoA: 'iy-33x1', puertoA: 'aire', equipoB: 'fcv-33x1', puertoB: 'senal', activo: true },
+  ],
+  lazos_plc: [
+    {
+      id: 'lic-954',
+      tag: 'LIC-954',
+      tipo: 'PID',
+      pv: 64,
+      sp: 65,
+      op: 52,
+      modo: 'AUTO',
+      instrumentoPV: 'lt-954',
+      instrumentoOP: 'fcv-954a',
+      kp: 1.4,
+      ki: 0.25,
+      alarmaAlta: 85,
+      alarmaBaja: 20,
+    },
+    {
+      id: 'lic-33x1',
+      tag: 'LIC-33X1',
+      tipo: 'PID',
+      pv: 72,
+      sp: 70,
+      op: 48,
+      modo: 'AUTO',
+      instrumentoPV: 'lt-33x1',
+      instrumentoOP: 'fcv-33x1',
+      kp: 1.2,
+      ki: 0.2,
+      alarmaAlta: 88,
+      alarmaBaja: 18,
+    },
+    {
+      id: 'fic-f1',
+      tag: 'FIC-F1',
+      tipo: 'PID',
+      pv: 58,
+      sp: 60,
+      op: 62,
+      modo: 'AUTO',
+      instrumentoPV: 'ft-f1',
+      instrumentoOP: 'fcv-f1',
+      kp: 1.6,
+      ki: 0.35,
+      alarmaAlta: 92,
+      alarmaBaja: 15,
+    },
+    {
+      id: 'pic-33x1-loop',
+      tag: 'PIC-33X1',
+      tipo: 'PI',
+      pv: 44,
+      sp: 45,
+      op: 50,
+      modo: 'AUTO',
+      instrumentoPV: 'pic-33x1',
+      instrumentoOP: 'fcv-33x2',
+      kp: 1.1,
+      ki: 0.18,
+      alarmaAlta: 80,
+      alarmaBaja: 15,
+    },
+  ],
+};

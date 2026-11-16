@@ -1,0 +1,6 @@
+{
+  "name": "Planta Viva v3.0",
+  "description": "Industrial digital twin editor and responsive workspace layout with dynamic equipment catalog, property inspector, and plant process canvas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "id": "5.11",
+    "descripcion": "Sistema PLC Modular 1756-L83EK (ControlLogix + repuesto)",
+    "categoria": "Instrumentacion",
+    "unidad": "unidad",
+    "cantidad": 2,
+    "precio_unitario": 8500,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 5.11"
+  },
+  {
+    "id": "5.8",
+    "descripcion": "Chasis modular 13 ranuras 1756-A13K (2 instalados + 1 repuesto)",
+    "categoria": "Instrumentacion",
+    "unidad": "unidad",
+    "cantidad": 3,
+    "precio_unitario": 1200,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 5.8"
+  },
+  {
+    "id": "5.9",
+    "descripcion": "Fuentes redundantes 1756-PA75R/B (2 instaladas + 1 repuesto)",
+    "categoria": "Electrica",
+    "unidad": "unidad",
+    "cantidad": 3,
+    "precio_unitario": 950,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 5.9"
+  },
+  {
+    "id": "5.14",
+    "descripcion": "Módulos E/S ControlLogix (IB32K, OB32K, OW16IK, IF16K HART, OF8K HART, EN2TK, MVI56E-MNETK)",
+    "categoria": "Instrumentacion",
+    "unidad": "unidad",
+    "cantidad": 18,
+    "precio_unitario": 1650,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 5.14-5.20"
+  },
+  {
+    "id": "5.22",
+    "descripcion": "HMI PanelView Plus 7 12 pulgadas (1 instalado + 1 repuesto)",
+    "categoria": "Instrumentacion",
+    "unidad": "unidad",
+    "cantidad": 2,
+    "precio_unitario": 4500,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 5.22"
+  },
+  {
+    "id": "5.23",
+    "descripcion": "Switch Ethernet Industrial 8 puertos administrable",
+    "categoria": "Electrica",
+    "unidad": "unidad",
+    "cantidad": 1,
+    "precio_unitario": 1850,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 5.23"
+  },
+  {
+    "id": "5.1",
+    "descripcion": "Gabinete N°1 Sala de Control NEMA 12/IP65 800x2000x800mm (1 + 1 repuesto)",
+    "categoria": "Electrica",
+    "unidad": "unidad",
+    "cantidad": 2,
+    "precio_unitario": 6800,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 5.1"
+  },
+  {
+    "id": "6.1",
+    "descripcion": "Gabinete N°2 Marshalling NEMA 12/IP65 800x2000x800mm (28 aisladores, 40 relés 24VDC, 12 bypass)",
+    "categoria": "Electrica",
+    "unidad": "unidad",
+    "cantidad": 1,
+    "precio_unitario": 5200,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 6.1"
+  },
+  {
+    "id": "6.2",
+    "descripcion": "Aisladores galvánicos 4-20mA y relés interfaz 24VDC en Gabinete Marshalling",
+    "categoria": "Instrumentacion",
+    "unidad": "unidad",
+    "cantidad": 68,
+    "precio_unitario": 145,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 6.2-6.4"
+  },
+  {
+    "id": "7.3",
+    "descripcion": "UPS On-Line Doble Conversión 3 KVA respaldo sistema PLC",
+    "categoria": "Electrica",
+    "unidad": "unidad",
+    "cantidad": 1,
+    "precio_unitario": 2800,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 7.3"
+  },
+  {
+    "id": "8.1",
+    "descripcion": "Gabinete Campo NEMA 4X/IP66 Acero Inox 316L con pedestal y tejadillo guarda-salpicadura",
+    "categoria": "Electrica",
+    "unidad": "unidad",
+    "cantidad": 1,
+    "precio_unitario": 9500,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 8.1"
+  },
+  {
+    "id": "8.2",
+    "descripcion": "Pulsadores Marcha/Paro, selectores MAN-OFF-AUTO, 18 LEDs y 2 paradas emergencia hongo",
+    "categoria": "Instrumentacion",
+    "unidad": "unidad",
+    "cantidad": 38,
+    "precio_unitario": 120,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 8.2-8.5"
+  },
+  {
+    "id": "9.1",
+    "descripcion": "Cable instrumentación apantallado STP 18 AWG",
+    "categoria": "Electrica",
+    "unidad": "m",
+    "cantidad": 1500,
+    "precio_unitario": 4.5,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 9.1"
+  },
+  {
+    "id": "9.5",
+    "descripcion": "Cable fibra óptica monomodo armored Sala Control - Campo",
+    "categoria": "Electrica",
+    "unidad": "m",
+    "cantidad": 300,
+    "precio_unitario": 12,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 9.5"
+  },
+  {
+    "id": "10.14",
+    "descripcion": "Transmisor caudal magnético ácido Rosemount 8712 (Tag 74FT572)",
+    "categoria": "Instrumentacion",
+    "unidad": "unidad",
+    "cantidad": 2,
+    "precio_unitario": 3200,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 10.14"
+  },
+  {
+    "id": "11.1",
+    "descripcion": "Ingeniería de detalle, programación RSLogix 5000 / FactoryTalk View, pruebas FAT/SAT y comisionamiento",
+    "categoria": "Proceso",
+    "unidad": "unidad",
+    "cantidad": 1,
+    "precio_unitario": 48500,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 11.1"
+  },
+  {
+    "id": "12.1",
+    "descripcion": "Canalización conduit IMC/PVC, bandejas portacables 316L y fundaciones de soporte en campo",
+    "categoria": "Civil",
+    "unidad": "m",
+    "cantidad": 420,
+    "precio_unitario": 65,
+    "fuente": "CM_PLANTA_DE_AGUA_M-7451_RELP_06NOV26.xlsx · Sec. 12.1"
+  }
+]

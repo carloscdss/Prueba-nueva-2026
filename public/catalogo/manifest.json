@@ -1,0 +1,2038 @@
+[
+  {
+    "id": "tanque-vertical",
+    "nombre": "Tanque Vertical",
+    "categoria": "Proceso",
+    "prefijo": "TNQ",
+    "color": "#94a3b8",
+    "unidad": "unidad",
+    "precio": 18500,
+    "precio_base": 18500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.6, "alto": 2.4, "profundidad": 1.6 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.8, 0.45, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.8, -0.65, 0], "dir": [1, 0, 0] },
+      { "id": "drenaje", "tipo": "proceso", "pos": [0, -1.2, 0.4], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "torre-fraccionadora",
+    "nombre": "Torre / Absorbedor",
+    "categoria": "Proceso",
+    "prefijo": "D",
+    "color": "#e2e8f0",
+    "unidad": "unidad",
+    "precio": 95000,
+    "precio_base": 95000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.0, "alto": 8.0, "profundidad": 2.0 },
+    "puertos": [
+      { "id": "entrada-superior", "tipo": "proceso", "pos": [0, 4.0, 0], "dir": [0, 1, 0] },
+      { "id": "alimentacion-lateral", "tipo": "proceso", "pos": [-1.0, 0.0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida-fondo", "tipo": "proceso", "pos": [1.0, -3.5, 0], "dir": [1, 0, 0] },
+      { "id": "rebose", "tipo": "proceso", "pos": [1.0, 3.0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "separador-vertical",
+    "nombre": "Separador Vertical",
+    "categoria": "Proceso",
+    "prefijo": "SEP",
+    "color": "#cbd5e1",
+    "unidad": "unidad",
+    "precio": 26000,
+    "precio_base": 26000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.8, "alto": 3.0, "profundidad": 1.8 },
+    "puertos": [
+      { "id": "entrada-lateral", "tipo": "proceso", "pos": [-0.9, 0.2, 0], "dir": [-1, 0, 0] },
+      { "id": "vapor-top", "tipo": "proceso", "pos": [0, 1.5, 0], "dir": [0, 1, 0] },
+      { "id": "liquido-bottom", "tipo": "proceso", "pos": [0.9, -0.9, 0], "dir": [1, 0, 0] },
+      { "id": "dren", "tipo": "proceso", "pos": [0, -1.5, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "separador-horizontal",
+    "nombre": "Separador Horizontal",
+    "categoria": "Proceso",
+    "prefijo": "SEPH",
+    "color": "#cbd5e1",
+    "unidad": "unidad",
+    "precio": 28500,
+    "precio_base": 28500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.5, "alto": 1.5, "profundidad": 1.5 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.25, 0.15, 0], "dir": [-1, 0, 0] },
+      { "id": "vapor", "tipo": "proceso", "pos": [0.6, 0.75, 0], "dir": [0, 1, 0] },
+      { "id": "liquido", "tipo": "proceso", "pos": [1.25, -0.2, 0], "dir": [1, 0, 0] },
+      { "id": "dren", "tipo": "proceso", "pos": [0, -0.75, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "acumulador-proceso",
+    "nombre": "Acumulador Proceso",
+    "categoria": "Proceso",
+    "prefijo": "ACU",
+    "color": "#94a3b8",
+    "unidad": "unidad",
+    "precio": 16000,
+    "precio_base": 16000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.8, "alto": 1.4, "profundidad": 1.2 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.9, 0.2, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.9, -0.2, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "columna-resina",
+    "nombre": "Columna Intercambio",
+    "categoria": "Proceso",
+    "prefijo": "COL",
+    "color": "#60a5fa",
+    "unidad": "unidad",
+    "precio": 22000,
+    "precio_base": 22000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.4, "alto": 3.2, "profundidad": 1.4 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.7, 0.8, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.7, -0.8, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "intercambiador-tubular",
+    "nombre": "Intercambiador Calor",
+    "categoria": "Proceso",
+    "prefijo": "E",
+    "color": "#f59e0b",
+    "unidad": "unidad",
+    "precio": 14500,
+    "precio_base": 14500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.8, "alto": 0.9, "profundidad": 0.9 },
+    "puertos": [
+      { "id": "proceso-entrada", "tipo": "proceso", "pos": [-0.9, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "proceso-salida", "tipo": "proceso", "pos": [0.9, 0, 0], "dir": [1, 0, 0] },
+      { "id": "servicio-entrada", "tipo": "proceso", "pos": [-0.4, 0.45, 0], "dir": [0, 1, 0] },
+      { "id": "servicio-salida", "tipo": "proceso", "pos": [0.4, -0.45, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "reactor-quimico",
+    "nombre": "Reactor Enchaquetado",
+    "categoria": "Proceso",
+    "prefijo": "RCT",
+    "color": "#3b82f6",
+    "unidad": "unidad",
+    "precio": 42000,
+    "precio_base": 42000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.8, "alto": 2.8, "profundidad": 1.8 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.9, 0.6, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.9, -0.8, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "caldera-vapor",
+    "nombre": "Caldera Pirotubular",
+    "categoria": "Proceso",
+    "prefijo": "CLD",
+    "color": "#ea580c",
+    "unidad": "unidad",
+    "precio": 68000,
+    "precio_base": 68000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 3.0, "alto": 2.2, "profundidad": 1.8 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.5, -0.3, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0, 1.1, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "torre-enfriamiento",
+    "nombre": "Torre de Enfriamiento",
+    "categoria": "Proceso",
+    "prefijo": "TEN",
+    "color": "#0284c7",
+    "unidad": "unidad",
+    "precio": 34000,
+    "precio_base": 34000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.6, "alto": 3.2, "profundidad": 2.6 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.3, 0.8, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.3, -1.2, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "horno-proceso",
+    "nombre": "Horno de Proceso",
+    "categoria": "Proceso",
+    "prefijo": "HRN",
+    "color": "#dc2626",
+    "unidad": "unidad",
+    "precio": 115000,
+    "precio_base": 115000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.8, "alto": 4.5, "profundidad": 2.4 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.4, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.4, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tambor-flash",
+    "nombre": "Tambor Flash",
+    "categoria": "Proceso",
+    "prefijo": "TFL",
+    "color": "#94a3b8",
+    "unidad": "unidad",
+    "precio": 19500,
+    "precio_base": 19500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.4, "alto": 2.6, "profundidad": 1.4 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.7, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.7, -0.8, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "desaireador-termico",
+    "nombre": "Desaireador Térmico",
+    "categoria": "Proceso",
+    "prefijo": "DES",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 31000,
+    "precio_base": 31000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.4, "alto": 2.2, "profundidad": 1.4 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.2, 0.5, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.2, -0.6, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "evaporador-pelicula",
+    "nombre": "Evaporador Película",
+    "categoria": "Proceso",
+    "prefijo": "EVP",
+    "color": "#38bdf8",
+    "unidad": "unidad",
+    "precio": 38000,
+    "precio_base": 38000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.5, "alto": 3.4, "profundidad": 1.5 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.75, 0.6, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.75, -0.9, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "filtro-prensa",
+    "nombre": "Filtro Prensa",
+    "categoria": "Proceso",
+    "prefijo": "FPR",
+    "color": "#475569",
+    "unidad": "unidad",
+    "precio": 24000,
+    "precio_base": 24000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.2, "alto": 1.4, "profundidad": 1.1 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.1, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.1, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+
+  {
+    "id": "bomba-centrifuga",
+    "nombre": "Bomba Centrífuga",
+    "categoria": "Mecanica",
+    "prefijo": "G",
+    "color": "#38bdf8",
+    "unidad": "unidad",
+    "precio": 6800,
+    "precio_base": 6800,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.6, "alto": 1.3, "profundidad": 0.9 },
+    "puertos": [
+      { "id": "succion", "tipo": "proceso", "pos": [-0.8, -0.1, 0], "dir": [-1, 0, 0] },
+      { "id": "descarga", "tipo": "proceso", "pos": [0.8, 0.2, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "bomba-desplazamiento",
+    "nombre": "Bomba Desplazamiento Pos.",
+    "categoria": "Mecanica",
+    "prefijo": "BDP",
+    "color": "#0284c7",
+    "unidad": "unidad",
+    "precio": 8900,
+    "precio_base": 8900,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.5, "alto": 1.1, "profundidad": 0.9 },
+    "puertos": [
+      { "id": "succion", "tipo": "proceso", "pos": [-0.75, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "descarga", "tipo": "proceso", "pos": [0.75, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "bomba-dosificadora",
+    "nombre": "Bomba Dosificadora",
+    "categoria": "Mecanica",
+    "prefijo": "BDOS",
+    "color": "#0ea5e9",
+    "unidad": "unidad",
+    "precio": 2650,
+    "precio_base": 2650,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.8, "alto": 0.7, "profundidad": 0.5 },
+    "puertos": [
+      { "id": "succion", "tipo": "proceso", "pos": [-0.4, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "descarga", "tipo": "proceso", "pos": [0.4, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "soplador-centrifugo",
+    "nombre": "Soplador Centrífugo",
+    "categoria": "Mecanica",
+    "prefijo": "SOP",
+    "color": "#0ea5e9",
+    "unidad": "unidad",
+    "precio": 12400,
+    "precio_base": 12400,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.5, "alto": 1.2, "profundidad": 1.0 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.75, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.75, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "compresor-centrifugo",
+    "nombre": "Compresor Centrífugo",
+    "categoria": "Mecanica",
+    "prefijo": "CMP",
+    "color": "#1d4ed8",
+    "unidad": "unidad",
+    "precio": 48000,
+    "precio_base": 48000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.0, "alto": 1.5, "profundidad": 1.2 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.0, 0.1, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.4, 0.75, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "compresor-tornillo",
+    "nombre": "Compresor de Tornillo",
+    "categoria": "Mecanica",
+    "prefijo": "CTN",
+    "color": "#2563eb",
+    "unidad": "unidad",
+    "precio": 29000,
+    "precio_base": 29000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.8, "alto": 1.4, "profundidad": 1.1 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.9, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.9, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "eyector-vapor",
+    "nombre": "Eyector de Vapor",
+    "categoria": "Mecanica",
+    "prefijo": "EYE",
+    "color": "#fb923c",
+    "unidad": "unidad",
+    "precio": 3400,
+    "precio_base": 3400,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.8, "alto": 0.6, "profundidad": 0.5 },
+    "puertos": [
+      { "id": "motive-steam", "tipo": "proceso", "pos": [-0.4, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "suction", "tipo": "proceso", "pos": [-0.1, 0.3, 0], "dir": [0, 1, 0] },
+      { "id": "discharge", "tipo": "proceso", "pos": [0.4, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "trampa-vapor",
+    "nombre": "Trampa de Vapor",
+    "categoria": "Mecanica",
+    "prefijo": "TRM",
+    "color": "#f97316",
+    "unidad": "unidad",
+    "precio": 950,
+    "precio_base": 950,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.4, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "entrada-vapor", "tipo": "proceso", "pos": [-0.2, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "condensado", "tipo": "proceso", "pos": [0.2, -0.1, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "turbina-vapor",
+    "nombre": "Turbina de Vapor",
+    "categoria": "Mecanica",
+    "prefijo": "TUR",
+    "color": "#b45309",
+    "unidad": "unidad",
+    "precio": 72000,
+    "precio_base": 72000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.4, "alto": 1.6, "profundidad": 1.4 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.2, 0.3, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.2, -0.3, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "agitador-industrial",
+    "nombre": "Agitador Industrial",
+    "categoria": "Mecanica",
+    "prefijo": "AGT",
+    "color": "#38bdf8",
+    "unidad": "unidad",
+    "precio": 5400,
+    "precio_base": 5400,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.9, "alto": 1.5, "profundidad": 0.9 },
+    "puertos": [
+      { "id": "alimentacion", "tipo": "electrico", "pos": [0, 0.75, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "ventilador-axial",
+    "nombre": "Ventilador Axial",
+    "categoria": "Mecanica",
+    "prefijo": "VNT",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 3800,
+    "precio_base": 3800,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.2, "alto": 1.2, "profundidad": 0.6 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [0, 0, -0.3], "dir": [0, 0, -1] },
+      { "id": "salida", "tipo": "proceso", "pos": [0, 0, 0.3], "dir": [0, 0, 1] }
+    ]
+  },
+  {
+    "id": "puente-grua",
+    "nombre": "Puente Grúa 10T",
+    "categoria": "Mecanica",
+    "prefijo": "PGR",
+    "color": "#eab308",
+    "unidad": "unidad",
+    "precio": 36000,
+    "precio_base": 36000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 5.0, "alto": 0.9, "profundidad": 1.2 },
+    "puertos": [
+      { "id": "alimentacion", "tipo": "electrico", "pos": [-2.5, 0, 0], "dir": [-1, 0, 0] }
+    ]
+  },
+
+  {
+    "id": "valvula-manual",
+    "nombre": "Válvula Manual",
+    "categoria": "Instrumentacion",
+    "prefijo": "VLV",
+    "color": "#ef4444",
+    "unidad": "unidad",
+    "precio": 650,
+    "precio_base": 650,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.9, "alto": 0.85, "profundidad": 0.65 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.45, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.45, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "valvula-neumatica",
+    "nombre": "Válvula Neumática (XV/MV)",
+    "categoria": "Instrumentacion",
+    "prefijo": "MV",
+    "color": "#10b981",
+    "unidad": "unidad",
+    "precio": 2400,
+    "precio_base": 2400,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.8, "alto": 0.85, "profundidad": 0.6 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.4, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.4, 0, 0], "dir": [1, 0, 0] },
+      { "id": "aire-19", "tipo": "instrumento", "pos": [0, 0.425, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "valvula-control",
+    "nombre": "Válvula de Control (LV/FV)",
+    "categoria": "Instrumentacion",
+    "prefijo": "LV",
+    "color": "#14b8a6",
+    "unidad": "unidad",
+    "precio": 4200,
+    "precio_base": 4200,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.85, "alto": 0.95, "profundidad": 0.6 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.42, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.42, 0, 0], "dir": [1, 0, 0] },
+      { "id": "senal", "tipo": "instrumento", "pos": [0, 0.475, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "valvula-seguridad",
+    "nombre": "Válvula Seguridad (PSV)",
+    "categoria": "Instrumentacion",
+    "prefijo": "PSV",
+    "color": "#f43f5e",
+    "unidad": "unidad",
+    "precio": 3100,
+    "precio_base": 3100,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.5, "alto": 0.6, "profundidad": 0.4 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [0, -0.3, 0], "dir": [0, -1, 0] },
+      { "id": "salida-atm", "tipo": "proceso", "pos": [0.25, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "valvula-solenoid",
+    "nombre": "Válvula Solenoide (1/2\"-4\")",
+    "categoria": "Instrumentacion",
+    "prefijo": "SOV",
+    "color": "#10b981",
+    "unidad": "pulgadas",
+    "precio": 480,
+    "precio_base": 480,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.5, "alto": 0.55, "profundidad": 0.4 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.25, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.25, 0, 0], "dir": [1, 0, 0] },
+      { "id": "senal", "tipo": "instrumento", "pos": [0, 0.275, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "valvula-mariposa",
+    "nombre": "Válvula Mariposa (2\"-24\")",
+    "categoria": "Instrumentacion",
+    "prefijo": "VM",
+    "color": "#059669",
+    "unidad": "pulgadas",
+    "precio": 920,
+    "precio_base": 920,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.7, "alto": 0.75, "profundidad": 0.5 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.35, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.35, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "valvula-compuerta",
+    "nombre": "Válvula Compuerta (2\"-24\")",
+    "categoria": "Instrumentacion",
+    "prefijo": "VC",
+    "color": "#dc2626",
+    "unidad": "pulgadas",
+    "precio": 1150,
+    "precio_base": 1150,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.8, "alto": 0.9, "profundidad": 0.6 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.4, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.4, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "valvula-check",
+    "nombre": "Válvula Check (2\"-24\")",
+    "categoria": "Instrumentacion",
+    "prefijo": "CHK",
+    "color": "#b91c1c",
+    "unidad": "pulgadas",
+    "precio": 780,
+    "precio_base": 780,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.7, "alto": 0.6, "profundidad": 0.5 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.35, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.35, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "valvula-bola",
+    "nombre": "Válvula Bola (1/2\"-12\")",
+    "categoria": "Instrumentacion",
+    "prefijo": "VB",
+    "color": "#e11d48",
+    "unidad": "pulgadas",
+    "precio": 620,
+    "precio_base": 620,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.65, "alto": 0.65, "profundidad": 0.45 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.325, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.325, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "sensor-presion",
+    "nombre": "Transmisor Presión (PT/PI)",
+    "categoria": "Instrumentacion",
+    "prefijo": "PI",
+    "color": "#22d3ee",
+    "unidad": "PSI",
+    "precio": 850,
+    "precio_base": 850,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.45, "alto": 0.45, "profundidad": 0.35 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.225, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "sensor-flujo",
+    "nombre": "Transmisor Flujo (FT)",
+    "categoria": "Instrumentacion",
+    "prefijo": "FT",
+    "color": "#06b6d4",
+    "unidad": "unidad",
+    "precio": 1650,
+    "precio_base": 1650,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.5, "alto": 0.45, "profundidad": 0.35 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.25, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.25, 0, 0], "dir": [1, 0, 0] },
+      { "id": "senal", "tipo": "instrumento", "pos": [0, 0.225, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "sensor-temperatura",
+    "nombre": "Transmisor Temp. (TT/TI)",
+    "categoria": "Instrumentacion",
+    "prefijo": "TI",
+    "color": "#38bdf8",
+    "unidad": "unidad",
+    "precio": 720,
+    "precio_base": 720,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.4, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.2, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "sensor-nivel",
+    "nombre": "Transmisor Nivel (LT)",
+    "categoria": "Instrumentacion",
+    "prefijo": "LT",
+    "color": "#0ea5e9",
+    "unidad": "m",
+    "precio": 1150,
+    "precio_base": 1150,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.45, "alto": 0.45, "profundidad": 0.35 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.225, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "switch-presion",
+    "nombre": "Presostato (PSH/PSL)",
+    "categoria": "Instrumentacion",
+    "prefijo": "PSH",
+    "color": "#f43f5e",
+    "unidad": "unidad",
+    "precio": 420,
+    "precio_base": 420,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.4, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.2, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "alarma-presion",
+    "nombre": "Alarma Presión (PAH/PAL)",
+    "categoria": "Instrumentacion",
+    "prefijo": "PAH",
+    "color": "#f97316",
+    "unidad": "unidad",
+    "precio": 380,
+    "precio_base": 380,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.4, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.2, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "indicador-nivel-vidrio",
+    "nombre": "Nivel de Cristal (LG)",
+    "categoria": "Instrumentacion",
+    "prefijo": "LG",
+    "color": "#22d3ee",
+    "unidad": "unidad",
+    "precio": 560,
+    "precio_base": 560,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.35, "alto": 0.9, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, 0, 0.15], "dir": [0, 0, 1] }
+    ]
+  },
+  {
+    "id": "controlador-nivel",
+    "nombre": "Controlador Nivel (LIC)",
+    "categoria": "Instrumentacion",
+    "prefijo": "LIC",
+    "color": "#3b82f6",
+    "unidad": "unidad",
+    "precio": 1400,
+    "precio_base": 1400,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.4, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.2, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "controlador-flujo",
+    "nombre": "Controlador Flujo (FIC)",
+    "categoria": "Instrumentacion",
+    "prefijo": "FIC",
+    "color": "#3b82f6",
+    "unidad": "unidad",
+    "precio": 1400,
+    "precio_base": 1400,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.4, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.2, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "selector-manual",
+    "nombre": "Selector Manual (HS)",
+    "categoria": "Instrumentacion",
+    "prefijo": "HS",
+    "color": "#eab308",
+    "unidad": "unidad",
+    "precio": 380,
+    "precio_base": 380,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.4, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.2, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "analizador-ph",
+    "nombre": "Analizador pH / Gas",
+    "categoria": "Instrumentacion",
+    "prefijo": "AT",
+    "color": "#06b6d4",
+    "unidad": "unidad",
+    "precio": 2250,
+    "precio_base": 2250,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.45, "alto": 0.5, "profundidad": 0.35 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, -0.25, 0], "dir": [0, -1, 0] }
+    ]
+  },
+
+  {
+    "id": "orificio-medidor",
+    "nombre": "Placa Orificio (FE)",
+    "categoria": "Tuberia",
+    "prefijo": "FE",
+    "color": "#94a3b8",
+    "unidad": "unidad",
+    "precio": 580,
+    "precio_base": 580,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.45, "alto": 0.45, "profundidad": 0.45 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.225, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.225, 0, 0], "dir": [1, 0, 0] },
+      { "id": "dp", "tipo": "instrumento", "pos": [0, 0.225, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "filtro-estrainer",
+    "nombre": "Strainer Succión (ST)",
+    "categoria": "Tuberia",
+    "prefijo": "ST",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 1200,
+    "precio_base": 1200,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.55, "alto": 0.6, "profundidad": 0.55 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.275, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.275, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tuberia",
+    "nombre": "Tramo de Tubería",
+    "categoria": "Tuberia",
+    "prefijo": "TUB",
+    "color": "#64748b",
+    "unidad": "m",
+    "precio": 185,
+    "precio_base": 185,
+    "formula_calculo": "longitud * factor",
+    "dimensiones": { "ancho": 1.6, "alto": 0.3, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.8, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.8, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tuberia-cs-sch40",
+    "nombre": "Tubería CS Sch40 (1/2\"-24\")",
+    "categoria": "Tuberia",
+    "prefijo": "TCS",
+    "color": "#475569",
+    "unidad": "m",
+    "precio": 125,
+    "precio_base": 125,
+    "formula_calculo": "longitud * factor",
+    "dimensiones": { "ancho": 2.0, "alto": 0.25, "profundidad": 0.25 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.0, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.0, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tuberia-cs-6-sch40",
+    "nombre": "Tubería CS 6\" Sch40",
+    "categoria": "Tuberia",
+    "prefijo": "T6",
+    "color": "#475569",
+    "unidad": "m",
+    "precio": 95,
+    "precio_base": 95,
+    "formula_calculo": "longitud * 95",
+    "dimensiones": { "ancho": 2.0, "alto": 0.2, "profundidad": 0.2 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.0, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.0, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tuberia-cs-8-sch40",
+    "nombre": "Tubería CS 8\" Sch40",
+    "categoria": "Tuberia",
+    "prefijo": "T8",
+    "color": "#475569",
+    "unidad": "m",
+    "precio": 125,
+    "precio_base": 125,
+    "formula_calculo": "longitud * 125",
+    "dimensiones": { "ancho": 2.0, "alto": 0.25, "profundidad": 0.25 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.0, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.0, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tuberia-cs-10-sch40",
+    "nombre": "Tubería CS 10\" Sch40",
+    "categoria": "Tuberia",
+    "prefijo": "T10",
+    "color": "#334155",
+    "unidad": "m",
+    "precio": 185,
+    "precio_base": 185,
+    "formula_calculo": "longitud * 185",
+    "dimensiones": { "ancho": 2.0, "alto": 0.3, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.0, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.0, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tuberia-ss-316-sch40",
+    "nombre": "Tubería SS-316 Sch40 (1/2\"-12\")",
+    "categoria": "Tuberia",
+    "prefijo": "TSS",
+    "color": "#cbd5e1",
+    "unidad": "m",
+    "precio": 240,
+    "precio_base": 240,
+    "formula_calculo": "longitud * factor",
+    "dimensiones": { "ancho": 2.0, "alto": 0.25, "profundidad": 0.25 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.0, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.0, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tuberia-pvc-sch80",
+    "nombre": "Tubería PVC Sch80 (1/2\"-6\")",
+    "categoria": "Tuberia",
+    "prefijo": "TPV",
+    "color": "#94a3b8",
+    "unidad": "m",
+    "precio": 34,
+    "precio_base": 34,
+    "formula_calculo": "longitud * factor",
+    "dimensiones": { "ancho": 2.0, "alto": 0.2, "profundidad": 0.2 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.0, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.0, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "codo-90-grados",
+    "nombre": "Codo 90° Radio Largo",
+    "categoria": "Tuberia",
+    "prefijo": "C90",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 285,
+    "precio_base": 285,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.5, "alto": 0.5, "profundidad": 0.5 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.25, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0, 0, 0.25], "dir": [0, 0, 1] }
+    ]
+  },
+  {
+    "id": "codo-45-grados",
+    "nombre": "Codo 45° Acero Carbono",
+    "categoria": "Tuberia",
+    "prefijo": "C45",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 210,
+    "precio_base": 210,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.45, "alto": 0.45, "profundidad": 0.45 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.225, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.225, 0, 0.15], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tee-reduccion",
+    "nombre": "Tee de Reducción",
+    "categoria": "Tuberia",
+    "prefijo": "TEE",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 340,
+    "precio_base": 340,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.6, "alto": 0.4, "profundidad": 0.5 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.3, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.3, 0, 0], "dir": [1, 0, 0] },
+      { "id": "ramal", "tipo": "proceso", "pos": [0, 0, 0.25], "dir": [0, 0, 1] }
+    ]
+  },
+  {
+    "id": "brida-welding-neck",
+    "nombre": "Brida Welding Neck 150#/300#/600#",
+    "categoria": "Tuberia",
+    "prefijo": "BRD",
+    "color": "#94a3b8",
+    "unidad": "unidad",
+    "precio": 420,
+    "precio_base": 420,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.4, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.2, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.2, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "valvula-compuerta-flangeada",
+    "nombre": "Válvula Compuerta Bridada",
+    "categoria": "Tuberia",
+    "prefijo": "VCB",
+    "color": "#b91c1c",
+    "unidad": "unidad",
+    "precio": 1680,
+    "precio_base": 1680,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.8, "alto": 0.9, "profundidad": 0.6 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.4, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.4, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "strainer-y-type",
+    "nombre": "Strainer Y-Type Bridado",
+    "categoria": "Tuberia",
+    "prefijo": "STR",
+    "color": "#475569",
+    "unidad": "unidad",
+    "precio": 1200,
+    "precio_base": 1200,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.6, "alto": 0.6, "profundidad": 0.5 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.3, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.3, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "expansion-joint",
+    "nombre": "Junta de Expansión",
+    "categoria": "Tuberia",
+    "prefijo": "EXP",
+    "color": "#f59e0b",
+    "unidad": "unidad",
+    "precio": 890,
+    "precio_base": 890,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.6, "alto": 0.45, "profundidad": 0.45 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.3, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.3, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "reductor-concentrico",
+    "nombre": "Reductor Concéntrico",
+    "categoria": "Tuberia",
+    "prefijo": "RED",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 195,
+    "precio_base": 195,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.45, "alto": 0.35, "profundidad": 0.35 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.225, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.225, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "soporte-tuberia-rack",
+    "nombre": "Soporte Pipe Rack",
+    "categoria": "Tuberia",
+    "prefijo": "SOPR",
+    "color": "#334155",
+    "unidad": "unidad",
+    "precio": 740,
+    "precio_base": 740,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 2.4, "alto": 3.0, "profundidad": 0.6 },
+    "puertos": []
+  },
+  {
+    "id": "tapon-roscado",
+    "nombre": "Tapón / Ciega de Línea",
+    "categoria": "Tuberia",
+    "prefijo": "TAP",
+    "color": "#475569",
+    "unidad": "unidad",
+    "precio": 85,
+    "precio_base": 85,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.3, "alto": 0.3, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.15, 0, 0], "dir": [-1, 0, 0] }
+    ]
+  },
+
+  {
+    "id": "losa-concreto",
+    "nombre": "Losa de Concreto",
+    "categoria": "Civil",
+    "prefijo": "LOS",
+    "color": "#64748b",
+    "unidad": "m3",
+    "precio": 185,
+    "precio_base": 185,
+    "formula_calculo": "volumen * densidad",
+    "dimensiones": { "ancho": 4.0, "alto": 0.25, "profundidad": 4.0 },
+    "puertos": []
+  },
+  {
+    "id": "zapata-aislada",
+    "nombre": "Zapata Aislada",
+    "categoria": "Civil",
+    "prefijo": "ZAP",
+    "color": "#475569",
+    "unidad": "m3",
+    "precio": 190,
+    "precio_base": 190,
+    "formula_calculo": "volumen * 190",
+    "dimensiones": { "ancho": 1.8, "alto": 0.5, "profundidad": 1.8 },
+    "puertos": []
+  },
+  {
+    "id": "columna-concreto",
+    "nombre": "Columna de Concreto",
+    "categoria": "Civil",
+    "prefijo": "CLC",
+    "color": "#94a3b8",
+    "unidad": "m3",
+    "precio": 210,
+    "precio_base": 210,
+    "formula_calculo": "volumen * 210",
+    "dimensiones": { "ancho": 0.45, "alto": 3.5, "profundidad": 0.45 },
+    "puertos": []
+  },
+  {
+    "id": "viga-concreto",
+    "nombre": "Viga de Concreto",
+    "categoria": "Civil",
+    "prefijo": "VIG",
+    "color": "#94a3b8",
+    "unidad": "m3",
+    "precio": 205,
+    "precio_base": 205,
+    "formula_calculo": "volumen * 205",
+    "dimensiones": { "ancho": 3.5, "alto": 0.45, "profundidad": 0.35 },
+    "puertos": []
+  },
+  {
+    "id": "muro-ladrillo",
+    "nombre": "Muro de Ladrillo",
+    "categoria": "Civil",
+    "prefijo": "MRL",
+    "color": "#b45309",
+    "unidad": "m2",
+    "precio": 42,
+    "precio_base": 42,
+    "formula_calculo": "area * 42",
+    "dimensiones": { "ancho": 3.0, "alto": 2.6, "profundidad": 0.2 },
+    "puertos": []
+  },
+  {
+    "id": "piso-industrial",
+    "nombre": "Piso Industrial Pulido",
+    "categoria": "Civil",
+    "prefijo": "PIN",
+    "color": "#334155",
+    "unidad": "m2",
+    "precio": 38,
+    "precio_base": 38,
+    "formula_calculo": "area * 38",
+    "dimensiones": { "ancho": 4.0, "alto": 0.15, "profundidad": 4.0 },
+    "puertos": []
+  },
+  {
+    "id": "fundacion-equipo",
+    "nombre": "Fundación de Equipo",
+    "categoria": "Civil",
+    "prefijo": "FND",
+    "color": "#475569",
+    "unidad": "m3",
+    "precio": 185,
+    "precio_base": 185,
+    "formula_calculo": "volumen * 185",
+    "dimensiones": { "ancho": 2.2, "alto": 0.6, "profundidad": 2.2 },
+    "puertos": []
+  },
+  {
+    "id": "acero-estructural",
+    "nombre": "Acero Estructural (IPR/IPS)",
+    "categoria": "Civil",
+    "prefijo": "ACE",
+    "color": "#1e293b",
+    "unidad": "kg",
+    "precio": 1.2,
+    "precio_base": 1.2,
+    "formula_calculo": "longitud * factor",
+    "dimensiones": { "ancho": 3.0, "alto": 0.35, "profundidad": 0.25 },
+    "puertos": []
+  },
+  {
+    "id": "plataforma-metalica",
+    "nombre": "Plataforma Metálica Grating",
+    "categoria": "Civil",
+    "prefijo": "PLT",
+    "color": "#64748b",
+    "unidad": "m2",
+    "precio": 145,
+    "precio_base": 145,
+    "formula_calculo": "area * 145",
+    "dimensiones": { "ancho": 2.5, "alto": 0.2, "profundidad": 2.5 },
+    "puertos": []
+  },
+  {
+    "id": "escalera-metalica",
+    "nombre": "Escalera Metálica Industrial",
+    "categoria": "Civil",
+    "prefijo": "ESC",
+    "color": "#eab308",
+    "unidad": "unidad",
+    "precio": 1850,
+    "precio_base": 1850,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.1, "alto": 3.2, "profundidad": 2.4 },
+    "puertos": []
+  },
+  {
+    "id": "baranda-proteccion",
+    "nombre": "Baranda de Protección",
+    "categoria": "Civil",
+    "prefijo": "BAR",
+    "color": "#facc15",
+    "unidad": "m",
+    "precio": 68,
+    "precio_base": 68,
+    "formula_calculo": "longitud * 68",
+    "dimensiones": { "ancho": 2.5, "alto": 1.1, "profundidad": 0.1 },
+    "puertos": []
+  },
+  {
+    "id": "pilote-hincado",
+    "nombre": "Pilote de Concreto",
+    "categoria": "Civil",
+    "prefijo": "PIL",
+    "color": "#475569",
+    "unidad": "m3",
+    "precio": 260,
+    "precio_base": 260,
+    "formula_calculo": "volumen * 260",
+    "dimensiones": { "ancho": 0.5, "alto": 4.0, "profundidad": 0.5 },
+    "puertos": []
+  },
+  {
+    "id": "muro-contencion",
+    "nombre": "Muro de Contención / Dique",
+    "categoria": "Civil",
+    "prefijo": "MRC",
+    "color": "#64748b",
+    "unidad": "m3",
+    "precio": 195,
+    "precio_base": 195,
+    "formula_calculo": "volumen * 195",
+    "dimensiones": { "ancho": 3.5, "alto": 1.8, "profundidad": 0.35 },
+    "puertos": []
+  },
+  {
+    "id": "viga-cimentacion",
+    "nombre": "Viga de Riostra / Cimentación",
+    "categoria": "Civil",
+    "prefijo": "VGC",
+    "color": "#475569",
+    "unidad": "m3",
+    "precio": 192,
+    "precio_base": 192,
+    "formula_calculo": "volumen * 192",
+    "dimensiones": { "ancho": 3.0, "alto": 0.5, "profundidad": 0.4 },
+    "puertos": []
+  },
+  {
+    "id": "tanquilla-drenaje",
+    "nombre": "Tanquilla / Sumidero Aceitoso",
+    "categoria": "Civil",
+    "prefijo": "TNK",
+    "color": "#334155",
+    "unidad": "unidad",
+    "precio": 1450,
+    "precio_base": 1450,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.0, "alto": 0.8, "profundidad": 1.0 },
+    "puertos": []
+  },
+
+  {
+    "id": "gabinete-base",
+    "nombre": "Gabinete PLC / DCS",
+    "categoria": "Electrica",
+    "prefijo": "GAB",
+    "color": "#475569",
+    "unidad": "unidad",
+    "precio": 7500,
+    "precio_base": 7500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.2, "alto": 2.0, "profundidad": 0.8 },
+    "puertos": [
+      { "id": "entrada-inferior", "tipo": "electrico", "pos": [0, -1.0, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "motor-electrico",
+    "nombre": "Motor Eléctrico (1-200 HP)",
+    "categoria": "Electrica",
+    "prefijo": "MOT",
+    "color": "#334155",
+    "unidad": "HP",
+    "precio": 3200,
+    "precio_base": 3200,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.1, "alto": 0.85, "profundidad": 0.75 },
+    "puertos": [
+      { "id": "alimentacion", "tipo": "electrico", "pos": [0, 0.425, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "cable-electrico",
+    "nombre": "Cable Eléctrico (12-4 AWG)",
+    "categoria": "Electrica",
+    "prefijo": "CAB",
+    "color": "#f59e0b",
+    "unidad": "m",
+    "precio": 3.5,
+    "precio_base": 3.5,
+    "formula_calculo": "longitud * 3.5",
+    "dimensiones": { "ancho": 1.5, "alto": 0.15, "profundidad": 0.15 },
+    "puertos": [
+      { "id": "entrada", "tipo": "electrico", "pos": [-0.75, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "electrico", "pos": [0.75, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "cable-12awg",
+    "nombre": "Cable Eléctrico 12 AWG",
+    "categoria": "Electrica",
+    "prefijo": "C12",
+    "color": "#fbbf24",
+    "unidad": "m",
+    "precio": 1.35,
+    "precio_base": 1.35,
+    "formula_calculo": "longitud * 1.35",
+    "dimensiones": { "ancho": 1.5, "alto": 0.12, "profundidad": 0.12 },
+    "puertos": []
+  },
+  {
+    "id": "cable-10awg",
+    "nombre": "Cable Eléctrico 10 AWG",
+    "categoria": "Electrica",
+    "prefijo": "C10",
+    "color": "#f59e0b",
+    "unidad": "m",
+    "precio": 1.85,
+    "precio_base": 1.85,
+    "formula_calculo": "longitud * 1.85",
+    "dimensiones": { "ancho": 1.5, "alto": 0.12, "profundidad": 0.12 },
+    "puertos": []
+  },
+  {
+    "id": "cable-8awg",
+    "nombre": "Cable Eléctrico 8 AWG",
+    "categoria": "Electrica",
+    "prefijo": "C8",
+    "color": "#d97706",
+    "unidad": "m",
+    "precio": 2.45,
+    "precio_base": 2.45,
+    "formula_calculo": "longitud * 2.45",
+    "dimensiones": { "ancho": 1.5, "alto": 0.14, "profundidad": 0.14 },
+    "puertos": []
+  },
+  {
+    "id": "cable-4awg",
+    "nombre": "Cable Eléctrico 4 AWG",
+    "categoria": "Electrica",
+    "prefijo": "C4",
+    "color": "#b45309",
+    "unidad": "m",
+    "precio": 3.5,
+    "precio_base": 3.5,
+    "formula_calculo": "longitud * 3.5",
+    "dimensiones": { "ancho": 1.5, "alto": 0.16, "profundidad": 0.16 },
+    "puertos": []
+  },
+  {
+    "id": "bandeja-portacable",
+    "nombre": "Bandeja Portacable Escalera",
+    "categoria": "Electrica",
+    "prefijo": "BPC",
+    "color": "#94a3b8",
+    "unidad": "m",
+    "precio": 38,
+    "precio_base": 38,
+    "formula_calculo": "longitud * 38",
+    "dimensiones": { "ancho": 2.4, "alto": 0.15, "profundidad": 0.45 },
+    "puertos": [
+      { "id": "entrada", "tipo": "electrico", "pos": [-1.2, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "electrico", "pos": [1.2, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tubo-conduit",
+    "nombre": "Tubo Conduit Rígido Galv.",
+    "categoria": "Electrica",
+    "prefijo": "CND",
+    "color": "#64748b",
+    "unidad": "m",
+    "precio": 14,
+    "precio_base": 14,
+    "formula_calculo": "longitud * 14",
+    "dimensiones": { "ancho": 2.0, "alto": 0.12, "profundidad": 0.12 },
+    "puertos": [
+      { "id": "entrada", "tipo": "electrico", "pos": [-1.0, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "electrico", "pos": [1.0, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "tablero-electrico",
+    "nombre": "Tablero Eléctrico CCM / Distribución",
+    "categoria": "Electrica",
+    "prefijo": "TBL",
+    "color": "#334155",
+    "unidad": "unidad",
+    "precio": 6400,
+    "precio_base": 6400,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.0, "alto": 2.1, "profundidad": 0.6 },
+    "puertos": [
+      { "id": "alimentacion", "tipo": "electrico", "pos": [0, -1.05, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "transformador",
+    "nombre": "Transformador de Potencia",
+    "categoria": "Electrica",
+    "prefijo": "TRF",
+    "color": "#475569",
+    "unidad": "kVA",
+    "precio": 18500,
+    "precio_base": 18500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.6, "alto": 1.8, "profundidad": 1.3 },
+    "puertos": [
+      { "id": "primario", "tipo": "electrico", "pos": [-0.8, 0.6, 0], "dir": [-1, 0, 0] },
+      { "id": "secundario", "tipo": "electrico", "pos": [0.8, 0.6, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "variador-frecuencia",
+    "nombre": "Variador de Frecuencia (VFD)",
+    "categoria": "Electrica",
+    "prefijo": "VFD",
+    "color": "#0ea5e9",
+    "unidad": "HP",
+    "precio": 3900,
+    "precio_base": 3900,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.6, "alto": 1.2, "profundidad": 0.45 },
+    "puertos": [
+      { "id": "entrada", "tipo": "electrico", "pos": [-0.3, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "electrico", "pos": [0.3, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "celda-media-tension",
+    "nombre": "Celda Media Tensión 13.8kV",
+    "categoria": "Electrica",
+    "prefijo": "CMT",
+    "color": "#1e293b",
+    "unidad": "unidad",
+    "precio": 22000,
+    "precio_base": 22000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.0, "alto": 2.2, "profundidad": 1.2 },
+    "puertos": [
+      { "id": "entrada", "tipo": "electrico", "pos": [-0.5, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "electrico", "pos": [0.5, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "ups-industrial",
+    "nombre": "UPS Industrial Respaldo",
+    "categoria": "Electrica",
+    "prefijo": "UPS",
+    "color": "#334155",
+    "unidad": "kVA",
+    "precio": 5800,
+    "precio_base": 5800,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.8, "alto": 1.6, "profundidad": 0.8 },
+    "puertos": [
+      { "id": "alimentacion", "tipo": "electrico", "pos": [0, -0.8, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "luminaria-industrial",
+    "nombre": "Luminaria LED Antiexplosiva",
+    "categoria": "Electrica",
+    "prefijo": "LUM",
+    "color": "#fef08a",
+    "unidad": "unidad",
+    "precio": 340,
+    "precio_base": 340,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 0.3, "profundidad": 0.4 },
+    "puertos": [
+      { "id": "alimentacion", "tipo": "electrico", "pos": [0, 0.15, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "malla-puesta-tierra",
+    "nombre": "Malla Puesta a Tierra Cobre",
+    "categoria": "Electrica",
+    "prefijo": "PAT",
+    "color": "#d97706",
+    "unidad": "m",
+    "precio": 22,
+    "precio_base": 22,
+    "formula_calculo": "longitud * 22",
+    "dimensiones": { "ancho": 2.0, "alto": 0.1, "profundidad": 2.0 },
+    "puertos": []
+  },
+  {
+    "id": "pararrayos-franklin",
+    "nombre": "Sistema Pararrayos",
+    "categoria": "Electrica",
+    "prefijo": "PRY",
+    "color": "#94a3b8",
+    "unidad": "unidad",
+    "precio": 1650,
+    "precio_base": 1650,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.4, "alto": 3.5, "profundidad": 0.4 },
+    "puertos": []
+  },
+
+  {
+    "id": "pared-block",
+    "nombre": "Pared de Block",
+    "categoria": "Arquitectura",
+    "prefijo": "PRD",
+    "color": "#94a3b8",
+    "unidad": "m2",
+    "precio": 36,
+    "precio_base": 36,
+    "formula_calculo": "area * 36",
+    "dimensiones": { "ancho": 3.0, "alto": 2.8, "profundidad": 0.15 },
+    "puertos": []
+  },
+  {
+    "id": "puerta-metalica",
+    "nombre": "Puerta Metálica Cortafuego",
+    "categoria": "Arquitectura",
+    "prefijo": "PRT",
+    "color": "#475569",
+    "unidad": "m2",
+    "precio": 380,
+    "precio_base": 380,
+    "formula_calculo": "area * 380",
+    "dimensiones": { "ancho": 1.0, "alto": 2.1, "profundidad": 0.15 },
+    "puertos": []
+  },
+  {
+    "id": "ventana-aluminio",
+    "nombre": "Ventana Aluminio y Vidrio",
+    "categoria": "Arquitectura",
+    "prefijo": "VNTN",
+    "color": "#38bdf8",
+    "unidad": "m2",
+    "precio": 210,
+    "precio_base": 210,
+    "formula_calculo": "area * 210",
+    "dimensiones": { "ancho": 1.6, "alto": 1.2, "profundidad": 0.12 },
+    "puertos": []
+  },
+  {
+    "id": "techo-lamina",
+    "nombre": "Techo Lámina Termoacústica",
+    "categoria": "Arquitectura",
+    "prefijo": "TCH",
+    "color": "#64748b",
+    "unidad": "m2",
+    "precio": 48,
+    "precio_base": 48,
+    "formula_calculo": "area * 48",
+    "dimensiones": { "ancho": 4.0, "alto": 0.15, "profundidad": 3.0 },
+    "puertos": []
+  },
+  {
+    "id": "piso-ceramica",
+    "nombre": "Piso Cerámica / Porcelanato",
+    "categoria": "Arquitectura",
+    "prefijo": "PCR",
+    "color": "#cbd5e1",
+    "unidad": "m2",
+    "precio": 34,
+    "precio_base": 34,
+    "formula_calculo": "area * 34",
+    "dimensiones": { "ancho": 3.0, "alto": 0.08, "profundidad": 3.0 },
+    "puertos": []
+  },
+  {
+    "id": "pintura-interior",
+    "nombre": "Pintura Interior Caucho",
+    "categoria": "Arquitectura",
+    "prefijo": "PNI",
+    "color": "#e2e8f0",
+    "unidad": "m2",
+    "precio": 8.5,
+    "precio_base": 8.5,
+    "formula_calculo": "area * 8.5",
+    "dimensiones": { "ancho": 3.0, "alto": 2.6, "profundidad": 0.05 },
+    "puertos": []
+  },
+  {
+    "id": "pintura-exterior",
+    "nombre": "Pintura Epóxica / Exterior",
+    "categoria": "Arquitectura",
+    "prefijo": "PNE",
+    "color": "#38bdf8",
+    "unidad": "m2",
+    "precio": 12,
+    "precio_base": 12,
+    "formula_calculo": "area * 12",
+    "dimensiones": { "ancho": 3.0, "alto": 2.6, "profundidad": 0.05 },
+    "puertos": []
+  },
+  {
+    "id": "cielo-raso",
+    "nombre": "Cielo Raso Modular",
+    "categoria": "Arquitectura",
+    "prefijo": "CLR",
+    "color": "#f1f5f9",
+    "unidad": "m2",
+    "precio": 26,
+    "precio_base": 26,
+    "formula_calculo": "area * 26",
+    "dimensiones": { "ancho": 3.0, "alto": 0.1, "profundidad": 3.0 },
+    "puertos": []
+  },
+  {
+    "id": "fachada-vidrio",
+    "nombre": "Fachada Muro Cortina Vidrio",
+    "categoria": "Arquitectura",
+    "prefijo": "FCH",
+    "color": "#0ea5e9",
+    "unidad": "m2",
+    "precio": 260,
+    "precio_base": 260,
+    "formula_calculo": "area * 260",
+    "dimensiones": { "ancho": 3.5, "alto": 3.2, "profundidad": 0.15 },
+    "puertos": []
+  },
+  {
+    "id": "impermeabilizacion-techo",
+    "nombre": "Impermeabilización Manto Asf.",
+    "categoria": "Arquitectura",
+    "prefijo": "IMP",
+    "color": "#1e293b",
+    "unidad": "m2",
+    "precio": 22,
+    "precio_base": 22,
+    "formula_calculo": "area * 22",
+    "dimensiones": { "ancho": 4.0, "alto": 0.06, "profundidad": 4.0 },
+    "puertos": []
+  },
+  {
+    "id": "tabiqueria-drywall",
+    "nombre": "Tabiquería Drywall / Gypsum",
+    "categoria": "Arquitectura",
+    "prefijo": "DRW",
+    "color": "#cbd5e1",
+    "unidad": "m2",
+    "precio": 32,
+    "precio_base": 32,
+    "formula_calculo": "area * 32",
+    "dimensiones": { "ancho": 3.0, "alto": 2.7, "profundidad": 0.12 },
+    "puertos": []
+  },
+  {
+    "id": "porton-corredizo",
+    "nombre": "Portón Industrial Corredizo",
+    "categoria": "Arquitectura",
+    "prefijo": "PTN",
+    "color": "#475569",
+    "unidad": "m2",
+    "precio": 290,
+    "precio_base": 290,
+    "formula_calculo": "area * 290",
+    "dimensiones": { "ancho": 4.0, "alto": 3.0, "profundidad": 0.2 },
+    "puertos": []
+  },
+  {
+    "id": "zocalo-sanitario",
+    "nombre": "Zócalo Epóxico Sanitario",
+    "categoria": "Arquitectura",
+    "prefijo": "ZOC",
+    "color": "#94a3b8",
+    "unidad": "m",
+    "precio": 18,
+    "precio_base": 18,
+    "formula_calculo": "longitud * 18",
+    "dimensiones": { "ancho": 3.0, "alto": 0.15, "profundidad": 0.1 },
+    "puertos": []
+  },
+  {
+    "id": "cerca-perimetral",
+    "nombre": "Cerca Perimetral Alfajol",
+    "categoria": "Arquitectura",
+    "prefijo": "CRC",
+    "color": "#64748b",
+    "unidad": "m",
+    "precio": 55,
+    "precio_base": 55,
+    "formula_calculo": "longitud * 55",
+    "dimensiones": { "ancho": 3.0, "alto": 2.2, "profundidad": 0.1 },
+    "puertos": []
+  },
+  {
+    "id": "aislamiento-termico",
+    "nombre": "Aislamiento Lana Mineral + Al",
+    "categoria": "Proceso",
+    "prefijo": "AIS",
+    "color": "#cbd5e1",
+    "unidad": "m2",
+    "precio": 48,
+    "precio_base": 48,
+    "formula_calculo": "area * 48",
+    "dimensiones": { "ancho": 2.0, "alto": 0.8, "profundidad": 0.8 },
+    "puertos": []
+  },
+  {
+    "id": "banco-capacitores",
+    "nombre": "Banco de Capacitores Automático",
+    "categoria": "Electrica",
+    "prefijo": "BCAP",
+    "color": "#0284c7",
+    "unidad": "kVA",
+    "precio": 4200,
+    "precio_base": 4200,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.9, "alto": 1.8, "profundidad": 0.7 },
+    "puertos": [
+      { "id": "alimentacion", "tipo": "electrico", "pos": [0, -0.9, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "generador-diesel",
+    "nombre": "Grupo Electrógeno Diésel",
+    "categoria": "Electrica",
+    "prefijo": "GEN",
+    "color": "#f59e0b",
+    "unidad": "kVA",
+    "precio": 45000,
+    "precio_base": 45000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 3.2, "alto": 1.9, "profundidad": 1.4 },
+    "puertos": [
+      { "id": "salida", "tipo": "electrico", "pos": [1.6, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "valvula-alivio-vacio",
+    "nombre": "Válvula Alivio Presión/Vacío",
+    "categoria": "Instrumentacion",
+    "prefijo": "PVRV",
+    "color": "#f43f5e",
+    "unidad": "unidad",
+    "precio": 1850,
+    "precio_base": 1850,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.5, "alto": 0.6, "profundidad": 0.5 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [0, -0.3, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "indicador-presion-local",
+    "nombre": "Manómetro Glicerina 4\" (PG)",
+    "categoria": "Instrumentacion",
+    "prefijo": "PG",
+    "color": "#38bdf8",
+    "unidad": "PSI",
+    "precio": 145,
+    "precio_base": 145,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.25, "alto": 0.35, "profundidad": 0.2 },
+    "puertos": [
+      { "id": "conexion", "tipo": "proceso", "pos": [0, -0.175, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "termometro-bimetalico",
+    "nombre": "Termómetro Bimetálico (TG)",
+    "categoria": "Instrumentacion",
+    "prefijo": "TG",
+    "color": "#0ea5e9",
+    "unidad": "unidad",
+    "precio": 165,
+    "precio_base": 165,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.25, "alto": 0.35, "profundidad": 0.2 },
+    "puertos": [
+      { "id": "conexion", "tipo": "proceso", "pos": [0, -0.175, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "rotametro-flujo",
+    "nombre": "Rotámetro Área Variable (FI)",
+    "categoria": "Instrumentacion",
+    "prefijo": "FI",
+    "color": "#22d3ee",
+    "unidad": "unidad",
+    "precio": 490,
+    "precio_base": 490,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.3, "alto": 0.65, "profundidad": 0.3 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [0, -0.325, 0], "dir": [0, -1, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0, 0.325, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "valvula-aguja",
+    "nombre": "Válvula Aguja Instrumentación",
+    "categoria": "Tuberia",
+    "prefijo": "VA",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 135,
+    "precio_base": 135,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.3, "alto": 0.35, "profundidad": 0.25 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.15, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.15, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "niple-hexagonal",
+    "nombre": "Niple / Conector Roscado",
+    "categoria": "Tuberia",
+    "prefijo": "NIP",
+    "color": "#94a3b8",
+    "unidad": "unidad",
+    "precio": 28,
+    "precio_base": 28,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.25, "alto": 0.2, "profundidad": 0.2 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.125, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.125, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "valvula-retencion-doble-plato",
+    "nombre": "Check Wafer Doble Plato",
+    "categoria": "Tuberia",
+    "prefijo": "CKW",
+    "color": "#475569",
+    "unidad": "unidad",
+    "precio": 640,
+    "precio_base": 640,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.35, "alto": 0.45, "profundidad": 0.45 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.175, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [0.175, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "transportador-banda",
+    "nombre": "Transportador de Banda",
+    "categoria": "Mecanica",
+    "prefijo": "TRB",
+    "color": "#334155",
+    "unidad": "m",
+    "precio": 1850,
+    "precio_base": 1850,
+    "formula_calculo": "longitud * 1850",
+    "dimensiones": { "ancho": 4.0, "alto": 1.0, "profundidad": 1.0 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-2.0, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [2.0, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "polipasto-cadena",
+    "nombre": "Polipasto Eléctrico 3T",
+    "categoria": "Mecanica",
+    "prefijo": "POL",
+    "color": "#eab308",
+    "unidad": "unidad",
+    "precio": 3100,
+    "precio_base": 3100,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.8, "alto": 0.9, "profundidad": 0.7 },
+    "puertos": [
+      { "id": "alimentacion", "tipo": "electrico", "pos": [0, 0.45, 0], "dir": [0, 1, 0] }
+    ]
+  },
+  {
+    "id": "chimenea-industrial",
+    "nombre": "Chimenea de Gases",
+    "categoria": "Proceso",
+    "prefijo": "CHM",
+    "color": "#64748b",
+    "unidad": "unidad",
+    "precio": 27500,
+    "precio_base": 27500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 1.2, "alto": 9.0, "profundidad": 1.2 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-0.6, -3.5, 0], "dir": [-1, 0, 0] }
+    ]
+  },
+  {
+    "id": "skid-medicion-fiscal",
+    "nombre": "Skid de Medición Fiscal",
+    "categoria": "Proceso",
+    "prefijo": "SKD",
+    "color": "#0ea5e9",
+    "unidad": "unidad",
+    "precio": 52000,
+    "precio_base": 52000,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 3.0, "alto": 1.6, "profundidad": 1.8 },
+    "puertos": [
+      { "id": "entrada", "tipo": "proceso", "pos": [-1.5, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "salida", "tipo": "proceso", "pos": [1.5, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "losa-aligerada",
+    "nombre": "Losa Aligerada Nervada",
+    "categoria": "Civil",
+    "prefijo": "LSA",
+    "color": "#64748b",
+    "unidad": "m2",
+    "precio": 68,
+    "precio_base": 68,
+    "formula_calculo": "area * 68",
+    "dimensiones": { "ancho": 4.0, "alto": 0.28, "profundidad": 4.0 },
+    "puertos": []
+  },
+  {
+    "id": "cubierta-metalica-estructura",
+    "nombre": "Cercha Metálica Techo",
+    "categoria": "Civil",
+    "prefijo": "CRC",
+    "color": "#475569",
+    "unidad": "kg",
+    "precio": 1.45,
+    "precio_base": 1.45,
+    "formula_calculo": "longitud * factor",
+    "dimensiones": { "ancho": 5.0, "alto": 1.1, "profundidad": 0.4 },
+    "puertos": []
+  },
+  {
+    "id": "rejilla-drenaje",
+    "nombre": "Canaleta y Rejilla Pluvial",
+    "categoria": "Civil",
+    "prefijo": "RJL",
+    "color": "#334155",
+    "unidad": "m",
+    "precio": 82,
+    "precio_base": 82,
+    "formula_calculo": "longitud * 82",
+    "dimensiones": { "ancho": 2.5, "alto": 0.25, "profundidad": 0.4 },
+    "puertos": []
+  },
+  {
+    "id": "plc-controllogix",
+    "nombre": "PLC ControlLogix 1756-L83EK",
+    "categoria": "Instrumentacion",
+    "prefijo": "PLC",
+    "color": "#0284c7",
+    "unidad": "unidad",
+    "precio": 8500,
+    "precio_base": 8500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.3, "alto": 0.2, "profundidad": 0.15 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, 0, 0.08], "dir": [0, 0, 1] },
+      { "id": "ethernet", "tipo": "electrico", "pos": [0.15, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "hmi-panel",
+    "nombre": "HMI PanelView Plus 7 12\"",
+    "categoria": "Instrumentacion",
+    "prefijo": "HMI",
+    "color": "#38bdf8",
+    "unidad": "unidad",
+    "precio": 4500,
+    "precio_base": 4500,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.35, "alto": 0.3, "profundidad": 0.08 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [0, 0, -0.04], "dir": [0, 0, -1] },
+      { "id": "ethernet", "tipo": "electrico", "pos": [0, -0.15, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "manometro",
+    "nombre": "Manómetro Indicador de Presión (PI)",
+    "categoria": "Instrumentacion",
+    "prefijo": "PI",
+    "color": "#e2e8f0",
+    "unidad": "unidad",
+    "precio": 180,
+    "precio_base": 180,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.1, "alto": 0.1, "profundidad": 0.08 },
+    "puertos": [
+      { "id": "proceso", "tipo": "proceso", "pos": [0, -0.05, 0], "dir": [0, -1, 0] }
+    ]
+  },
+  {
+    "id": "convertidor-ip",
+    "nombre": "Convertidor Electroneumático I/P",
+    "categoria": "Instrumentacion",
+    "prefijo": "IY",
+    "color": "#f59e0b",
+    "unidad": "unidad",
+    "precio": 620,
+    "precio_base": 620,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.12, "alto": 0.12, "profundidad": 0.1 },
+    "puertos": [
+      { "id": "senal", "tipo": "instrumento", "pos": [-0.06, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "aire", "tipo": "instrumento", "pos": [0.06, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "switch-nivel",
+    "nombre": "Switch de Nivel Alto/Bajo (LSH/LSL)",
+    "categoria": "Instrumentacion",
+    "prefijo": "LSH",
+    "color": "#fb923c",
+    "unidad": "unidad",
+    "precio": 480,
+    "precio_base": 480,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.15, "alto": 0.2, "profundidad": 0.12 },
+    "puertos": [
+      { "id": "proceso", "tipo": "proceso", "pos": [-0.08, 0, 0], "dir": [-1, 0, 0] },
+      { "id": "senal", "tipo": "instrumento", "pos": [0.08, 0, 0], "dir": [1, 0, 0] }
+    ]
+  },
+  {
+    "id": "analizador-generico",
+    "nombre": "Analizador en Línea (pH / CE / Sílice)",
+    "categoria": "Instrumentacion",
+    "prefijo": "AT",
+    "color": "#06b6d4",
+    "unidad": "unidad",
+    "precio": 3200,
+    "precio_base": 3200,
+    "formula_calculo": "cantidad",
+    "dimensiones": { "ancho": 0.45, "alto": 0.5, "profundidad": 0.35 },
+    "puertos": [
+      { "id": "muestra", "tipo": "proceso", "pos": [0, -0.25, 0], "dir": [0, -1, 0] },
+      { "id": "senal", "tipo": "instrumento", "pos": [0, 0.15, 0.18], "dir": [0, 0, 1] }
+    ]
+  }
+]
